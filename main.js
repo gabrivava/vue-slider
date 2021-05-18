@@ -24,7 +24,6 @@ const root = new Vue(
 
             counter: 0,
 
-            
         },
 
         methods: {
@@ -41,7 +40,25 @@ const root = new Vue(
                 }
                 return this.counter --
             },
-                
+            scorri() {
+                setInterval(this.next, 2000)
+            }
+
+        },
+
+        mounted: function () {
+            this.scorri()
+
+            document.addEventListener('keyup', (event) => {
+                if (event.key === 'ArrowLeft') {
+                    return this.prev()
+                } else if (event.key === 'ArrowRight') {
+                    return this.next()
+                }
+            }) 
+
+            
+
         }
     }
 );
