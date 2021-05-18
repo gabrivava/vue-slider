@@ -41,7 +41,7 @@ const root = new Vue(
                 return this.counter --
             },
             scorri() {
-                setInterval(this.next, 2000)
+                setInterval(this.next, 3000)
             }
 
         },
