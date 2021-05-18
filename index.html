@@ -30,7 +30,7 @@
 
         <!-- pallini navigazione -->
         <div class="barra_pallini">
-            <div v-for="(image, index) in images" :counter="counter" :index="index" class="pallino" @click="getIndex">
+            <div v-for="(image, index) in images" :counter="counter" :index="index" class="pallino" @click="counter = index">
                 <div class="active" v-if="counter === index"></div>
             </div>
         </div>

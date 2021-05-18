@@ -24,6 +24,7 @@ const root = new Vue(
 
             counter: 0,
 
+            
         },
 
         methods: {
@@ -41,10 +42,6 @@ const root = new Vue(
                 return this.counter --
             },
                 
-            getIndex() {
-                this.counter = document.querySelector('.pallino');
-                console.log(this.counter);
-            }
         }
     }
 );
